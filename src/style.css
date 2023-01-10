@@ -1,0 +1,352 @@
+/* 
+Notas peque;as!
+
+Paleta de colores a utilizar:
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a; 
+
+Tipografia
+Familia: 'Roboto'
+
+Tamaños Tipográficos
+Cuerpos de texto: 12px
+Titulares (Basado en tu última visita/Ofertas): 24px
+Precios: 18px
+Descuentos: 16px
+Descripciones: 16px
+
+Íconos
+https://fontawesome.com/icons?d=gallery&m=free
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+  text-decoration: none;
+}
+
+header {
+  background-color: #eac926;
+  padding: 15px 25px 15px 25px;
+}
+
+.containheader {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
+
+.containheaderchild {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  width: 60vw;
+  justify-content: space-between;
+}
+
+.buy-creditcard {
+  display: flex;
+  font-size: 16px;
+  text-align: right;
+  align-self: center;
+}
+
+input {
+  width: 30vw;
+  height: 30px;
+}
+
+.searchwithmagni {
+  display: flex;
+  align-items: center;
+}
+
+.imgmercadoliebre {
+  width: 400px;
+  height: 200px;
+}
+
+.magnifying {
+  display: flex;
+  align-items: center;
+  background-color: #ebebeb;
+  height: 23px;
+  width: 21px;
+  font-size: 15px;
+}
+
+A:link,
+A:hover,
+A:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.QuickAccess,
+.PersonalAccess {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+}
+
+.QuickAccess li,
+.PersonalAccess li {
+  margin: 25px 15px 0px 15px;
+}
+
+.barBlue {
+  display: none;
+}
+
+/* main */
+
+.main-container {
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+}
+
+.LastView,
+.Sales {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.home-banner {
+  background-image: url(../img/img-home-banner.jpg);
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center top;
+}
+
+.firstArticleofSales,
+.secondArticleofSales,
+.thirdArticleofSales,
+.fourArticleofLastView,
+.firstArticleofLastView,
+.secondArticleofLastView,
+.thirdArticleofLastView,
+.fourthArticleofSales {
+  margin: 5px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid #ebebeb;
+  background-color: white;
+  -webkit-box-shadow: 0 0 5px 2px #fff;
+  -moz-box-shadow: 0 0 5px 2px #fff;
+  box-shadow: 0 0 5px 2px rgb(171, 171, 171);
+}
+
+article li {
+  list-style: none;
+  text-align: center;
+}
+article img {
+  width: 450px;
+  height: 450px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #707070;
+  text-align: justify;
+  vertical-align: left;
+  line-height: 75px;
+}
+
+.logoshipping {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 80%;
+  top: -20%;
+  color: #39b54a;
+  z-index: 0;
+}
+.hrline {
+  border-top: 2px solid;
+  border-color: #ebebeb;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.priceandpercent {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 15px;
+  align-items: center;
+}
+.price {
+  /* margin-left: 1px; */
+  flex-basis: 30%;
+  font-size: 18px;
+  text-align: left;
+}
+
+.percentoff {
+  font-size: 16px;
+  color: #39b54a;
+  text-align: left;
+  flex-basis: 70%;
+}
+.productname {
+  color: #666;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 15px;
+  font-size: 16px;
+}
+
+/* footer */
+
+footer i {
+  color: #1259c3;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+}
+footer p {
+  font-size: small;
+}
+footer span {
+  font-size: small;
+  padding: 10px;
+  color: #666;
+}
+.CashorCreditCard,
+.FreeShipping,
+.Safety {
+  text-align: center;
+  margin: 75px;
+  color: #666;
+}
+
+.footersection {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .containheader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .imgmercadoliebre {
+    width: 200px;
+    height: 50px;
+  }
+  .QuickAccess,
+  .PersonalAccess {
+    display: none;
+  }
+
+  .home-banner {
+    background-image: url(../img/img-home-banner.jpg);
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .buy-creditcard {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .barBlue {
+    margin: 0 auto;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ebebeb;
+    background-color: #1259c3;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+
+  .firstArticleofSales,
+  .secondArticleofSales,
+  .thirdArticleofSales,
+  .fourArticleofLastView,
+  .firstArticleofLastView,
+  .secondArticleofLastView,
+  .thirdArticleofLastView,
+  .fourthArticleofSales {
+    width: 200px;
+  }
+  article img {
+    width: 150px;
+    height: 150px;
+  }
+  .footersection {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .home-banner {
+    background-image: url(../img/img-home-banner.jpg);
+    width: 100vw;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .imgmercadoliebre {
+    width: 200px;
+    height: 50px;
+  }
+
+  .buy-creditcard {
+    font-size: 16px;
+    text-align: center;
+  }
+  .firstArticleofSales,
+  .secondArticleofSales,
+  .thirdArticleofSales,
+  .fourArticleofLastView,
+  .firstArticleofLastView,
+  .secondArticleofLastView,
+  .thirdArticleofLastView,
+  .fourthArticleofSales {
+    width: 350px;
+  }
+  article img {
+    width: 250px;
+    height: 250px;
+  }
+}
