@@ -33,20 +33,19 @@ https://fontawesome.com/icons?d=gallery&m=free
 
 header {
   background-color: #eac926;
-  padding: 15px 25px 15px 25px;
+  padding: 25px 25px 25px 25px;
 }
 
 .containheader {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0px;
 }
 
 .containheaderchild {
   display: flex;
   flex-direction: row;
   align-self: center;
-  width: 60vw;
+  width: 65vw;
   justify-content: space-between;
 }
 
@@ -68,8 +67,8 @@ input {
 }
 
 .imgmercadoliebre {
-  width: 400px;
-  height: 200px;
+  width: 450px;
+  height: 150px;
 }
 
 .magnifying {
@@ -102,7 +101,7 @@ A:visited {
 
 .QuickAccess li,
 .PersonalAccess li {
-  margin: 25px 15px 0px 15px;
+  margin: 0px 15px 0px 15px;
 }
 
 .barBlue {
@@ -123,7 +122,8 @@ A:visited {
 .Sales {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
 }
 
 .home-banner {
@@ -143,8 +143,8 @@ A:visited {
 .thirdArticleofLastView,
 .fourthArticleofSales {
   margin: 5px;
-  width: 500px;
   display: flex;
+  width: 400px;
   align-items: center;
   flex-direction: column;
   border-radius: 5px;
@@ -160,8 +160,8 @@ article li {
   text-align: center;
 }
 article img {
-  width: 450px;
-  height: 450px;
+  width: 362px;
+  height: 362px;
 }
 
 h2 {
@@ -251,6 +251,11 @@ footer span {
   color: #666;
 }
 
+.copyright {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .footersection {
   display: flex;
   flex-direction: row;
@@ -266,6 +271,7 @@ footer span {
     width: 200px;
     height: 50px;
   }
+
   .QuickAccess,
   .PersonalAccess {
     display: none;
@@ -305,11 +311,11 @@ footer span {
   .secondArticleofLastView,
   .thirdArticleofLastView,
   .fourthArticleofSales {
-    width: 200px;
+    width: 300px;
   }
   article img {
-    width: 150px;
-    height: 150px;
+    width: 271px;
+    height: 271px;
   }
   .footersection {
     display: flex;
