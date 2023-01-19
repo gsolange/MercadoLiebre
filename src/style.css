@@ -31,9 +31,14 @@ https://fontawesome.com/icons?d=gallery&m=free
   text-decoration: none;
 }
 
+body {
+  height: 100%;
+  width: 100%;
+}
+
 header {
   background-color: #eac926;
-  padding: 25px 25px 25px 25px;
+  padding: 25px;
 }
 
 .containheader {
@@ -59,6 +64,7 @@ header {
 input {
   width: 30vw;
   height: 30px;
+  margin-right: 10px;
 }
 
 .searchwithmagni {
@@ -67,8 +73,8 @@ input {
 }
 
 .imgmercadoliebre {
-  width: 450px;
-  height: 150px;
+  width: 100%;
+  height: 90px;
 }
 
 .magnifying {
@@ -142,7 +148,7 @@ A:visited {
 .secondArticleofLastView,
 .thirdArticleofLastView,
 .fourthArticleofSales {
-  margin: 5px;
+  margin: 10px;
   display: flex;
   width: 400px;
   align-items: center;
@@ -168,8 +174,14 @@ h2 {
   font-size: 24px;
   color: #707070;
   text-align: justify;
-  vertical-align: left;
-  line-height: 75px;
+}
+
+.hrline {
+  border-top: 2px solid;
+  border-color: #ebebeb;
+  width: 100%;
+  z-index: 1;
+  position: relative;
 }
 
 .logoshipping {
@@ -188,13 +200,6 @@ h2 {
   top: -20%;
   color: #39b54a;
   z-index: 0;
-}
-.hrline {
-  border-top: 2px solid;
-  border-color: #ebebeb;
-  width: 100%;
-  z-index: 1;
-  position: relative;
 }
 
 .priceandpercent {
@@ -239,6 +244,7 @@ footer p {
   font-size: small;
 }
 footer span {
+  display: block;
   font-size: small;
   padding: 10px;
   color: #666;
@@ -267,8 +273,50 @@ footer span {
     flex-direction: column;
     justify-content: center;
   }
+
+  .containheaderchild {
+    display: flex;
+    flex-direction: row;
+    width: 65vw;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+  }
+
+  .buy-creditcard {
+    display: flex;
+    font-size: 16px;
+    text-align: right;
+    align-self: center;
+    margin: 20px;
+  }
+
+  input {
+    height: 30px;
+    width: 30vw;
+    border: none;
+  }
+
+  .searchwithmagni {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 30px;
+  }
+
+  .magnifying {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: none;
+    height: 23px;
+    width: 21px;
+    font-size: 15px;
+    color: #ebebeb;
+  }
+
   .imgmercadoliebre {
-    width: 200px;
+    width: 100%;
     height: 50px;
   }
 
@@ -324,6 +372,9 @@ footer span {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  header {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
   .home-banner {
     background-image: url(../img/img-home-banner.jpg);
     width: 100vw;
@@ -333,8 +384,8 @@ footer span {
   }
 
   .imgmercadoliebre {
-    width: 200px;
-    height: 50px;
+    width: 100%;
+    height: 70px;
   }
 
   .buy-creditcard {
