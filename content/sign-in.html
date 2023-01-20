@@ -31,7 +31,7 @@
           <form
             class="searchwithmagni"
             action="../../form-result.php"
-            method="post"
+            method="get"
             target="_blank"
           >
             <input
@@ -54,7 +54,7 @@
       <nav class="navLinks">
         <!-- Lista de Accesos directos rapido -->
         <ul class="QuickAccess">
-          <li><a href="#">Ofertas</a></li>
+          <li><a href="/index.html">Ofertas</a></li>
           <li>
             <a href="#">Tiendas Oficiales</a>
           </li>
@@ -83,95 +83,166 @@
       <!-- Boton azul. -->
       <div class="barBlue"><i class="fa-solid fa-bars"></i></div>
     </header>
-    <main class="main_form">
-      <form action="../index.html" method="POST" class="card_form">
-        <fieldset class="card_register__name">
+    <main class="container_mainsignin">
+      <form
+        class="container_childsignin"
+        action="/index.html"
+        method="POST"
+        class="card_form"
+      >
+        <fieldset class="form_personaldata">
           <legend>Datos Personales</legend>
           <input
             class="form"
             type="text"
             name="nombre-apellido"
-            placeholder="Nombre y Apellido"
+            placeholder="Nombre y apellido"
+            required
           />
           <input
             class="form"
             type="text"
             name="nombre-usuario"
-            placeholder="Nombre de Usuario"
+            placeholder="Nombre de usuario"
+            required
           />
           <input class="form" type="email" name="email" placeholder="E-mail" />
-          <legend for="fecha-nacimiento">
-            Fecha de Nacimiento
-            <input
-              id="form_date"
-              class="form"
-              type="date"
-              name="fecha-nacimiento"
-            />
-          </legend>
+          <legend for="birth">Fecha de nacimiento</legend>
           <input
-            class="form"
+            type="date"
+            id="birth"
+            name="birthday"
+            value="2006-01-01"
+            min="1924-01-01"
+            max="2005-01-01"
+            required
+          />
+
+          <input
+            class="adress"
             type="text"
-            name="domicilio"
+            name="address"
             placeholder="Domicilio"
+            required
           />
         </fieldset>
-        <fieldset class="card_register__user">
+        <fieldset class="form_userprofile">
           <legend>Perfil de usuario</legend>
-          <input
-            class="user"
-            type="radio"
-            name="option"
-            value="1"
-            required
-          /><label>Comprador</label>
-          <input
-            class="user"
-            type="radio"
-            name="option"
-            value="2"
-            required
-          /><label>Vendedor</label>
+          <ul>
+            <li class="form_choices">
+              <label>
+                <input
+                  class="user"
+                  type="radio"
+                  name="option"
+                  value="1"
+                  required
+                />
+                Comprador</label
+              >
+            </li>
+
+            <li class="form_choices">
+              <label>
+                <input
+                  class="user"
+                  type="radio"
+                  name="option"
+                  value="2"
+                  required
+                />
+                Vendedor</label
+              >
+            </li>
+          </ul>
         </fieldset>
-        <fieldset class="card_register__intereses">
+        <fieldset class="form_interest">
           <legend>Intereses</legend>
-          <article>
-            <input type="checkbox" name="intereses" value="Electro" />
-            <label>Electro</label>
-          </article>
-          <article>
-            <input type="checkbox" name="intereses" value="Moda" />
-            <label>Moda</label>
-          </article>
-          <article>
-            <input type="checkbox" name="intereses" value="Hogar" />
-            <label>Hogar</label>
-          </article>
-          <article>
-            <input type="checkbox" name="intereses" value="Juguetería" />
-            <label>Juguetería</label>
-          </article>
-          <article>
-            <input type="checkbox" name="intereses" value="Vida-Sana" />
-            <label>Vida Sana</label>
-          </article>
+          <div class="form_interestchecks">
+            <ul>
+              <li class="form_choices">
+                <input
+                  type="checkbox"
+                  name="intereses"
+                  value="Electro"
+                  required
+                />
+                <label>Electro</label>
+              </li>
+
+              <li class="form_choices">
+                <input type="checkbox" name="intereses" value="Moda" required />
+                <label>Moda</label>
+              </li>
+
+              <li class="form_choices">
+                <input
+                  type="checkbox"
+                  name="intereses"
+                  value="Hogar"
+                  required
+                />
+                <label>Hogar</label>
+              </li>
+
+              <li class="form_choices">
+                <input
+                  type="checkbox"
+                  name="intereses"
+                  value="Juguetería"
+                  required
+                />
+                <label>Juguetería</label>
+              </li>
+
+              <li class="form_choices">
+                <input
+                  type="checkbox"
+                  name="intereses"
+                  value="Vida-Sana"
+                  required
+                />
+                <label>Vida Sana</label>
+              </li>
+            </ul>
+          </div>
         </fieldset>
-        <fieldset class="card_register__photo">
+        <fieldset class="form_picture">
           <legend>Foto</legend>
-          <input type="file" name="profile-img" value="subi una imagen" />
+          <input
+            type="file"
+            name="profile-img"
+            value="subi una imagen"
+            required
+          />
         </fieldset>
-        <fieldset class="card_register__password">
+        <fieldset class="form_password">
           <legend for="password">Contraseña</legend>
-          <input class="form" type="password" name="pass" />
+          <input
+            class="form"
+            type="password"
+            name="pass"
+            placeholder="Contraseña"
+            required
+          />
           <legend for="password">Confirma tu contraseña</legend>
-          <input class="form" type="password" name="pass" />
+          <input
+            class="form"
+            type="password"
+            name="pass"
+            placeholder="Confirma tu contraseña"
+            required
+          />
         </fieldset>
-        <a href="../index.html">
-          <button class="btn_form" type="submit" name="enviar">
-            Crear Cuenta
+        <section>
+          <button class="form_createaccount" type="submit" name="enviar">
+            <a href="/index.html">Crear Cuenta </a>
           </button>
-        </a>
-        <button class="btn_form" type="reset" name="delete">Restablecer</button>
+
+          <button class="form_reset" type="reset" name="delete">
+            <a href="/content/sign-in.html">Limpiar</a>
+          </button>
+        </section>
       </form>
     </main>
     <footer>
